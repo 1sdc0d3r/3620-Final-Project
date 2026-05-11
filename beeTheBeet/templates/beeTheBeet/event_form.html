@@ -1,21 +1,17 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>New Event</title>
-  </head>
-  <body>
+{% extends "beeTheBeet/base.html" %}
+{% block title %}New Event{% endblock %}
+{% block content %}
+  <form method="post" action="">
+    {% csrf_token %}
     <h1>New Event</h1>
-    <form method="post" action="">
-      {% csrf_token %}
-      {% for field in form %}
-        <div>
-          {{ field.label_tag }} {{ field }} {{ field.errors }}
-        </div>
-      {% endfor %}
-      <button type="submit">Save</button>
-    </form>
-    <p><a href="{% url 'event_list' %}">Cancel</a></p>
-  </body>
-</html>
+    {% for field in form %}
+      <div class="form-control {% if field.errors %}errors{% endif %}">
+        {{ field.label_tag }}
+        {{ field }}
+        {{ field.errors }}
+      </div>
+    {% endfor %}
+    <button type="submit">Save</button>
+  </form>
+  <p class="after-form"><a href="{% url 'event_list' %}">Cancel</a></p>
+{% endblock %}

@@ -1,0 +1,63 @@
+form {
+  margin: 3rem auto;
+  width: 80%;
+  min-width: 30rem;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 1em;
+  box-shadow: 0 2px 8px cornflowerblue;
+}
+form h1 {
+  margin-top: 0;
+}
+form button {
+  cursor: pointer;
+  background-color: maroon;
+  border: 1px solid maroon;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+}
+form button:hover, form button:active {
+  background-color: pink;
+  border-color: pink;
+}
+
+.form-control {
+  margin-bottom: 1em;
+}
+.form-control.errors {
+  color: maroon;
+}
+
+.page {
+  margin: 3rem auto;
+  width: 80%;
+  min-width: 30rem;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 1em;
+  box-shadow: 0 2px 8px cornflowerblue;
+}
+.page h1 {
+  margin-top: 0;
+}
+.page ul {
+  padding-left: 1.5rem;
+}
+.page ul li {
+  margin-bottom: 0.5em;
+}
+
+a {
+  color: maroon;
+}
+a:hover, a:active {
+  color: pink;
+}
+
+.after-form {
+  margin: 1rem auto;
+  width: 80%;
+  min-width: 30rem;
+}/*# sourceMappingURL=style.css.map */

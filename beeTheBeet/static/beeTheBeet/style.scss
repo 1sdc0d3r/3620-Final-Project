@@ -1,0 +1,75 @@
+$btn: maroon;
+$btn-hover: pink;
+
+form {
+  margin: 3rem auto;
+  width: 80%;
+  min-width: 30rem;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 1em;
+  box-shadow: 0 2px 8px cornflowerblue;
+
+  h1 {
+    margin-top: 0;
+  }
+
+  button {
+    cursor: pointer;
+    background-color: $btn;
+    border: 1px solid $btn;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+
+    &:hover,
+    &:active {
+      background-color: $btn-hover;
+      border-color: $btn-hover;
+    }
+  }
+}
+
+.form-control {
+  margin-bottom: 1em;
+
+  &.errors {
+    color: $btn;
+  }
+}
+
+.page {
+  margin: 3rem auto;
+  width: 80%;
+  min-width: 30rem;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 1em;
+  box-shadow: 0 2px 8px cornflowerblue;
+
+  h1 {
+    margin-top: 0;
+  }
+
+  ul {
+    padding-left: 1.5rem;
+    li {
+        margin-bottom: 0.5em;
+      }
+  }
+}
+
+a {
+  color: $btn;
+
+  &:hover,
+  &:active {
+    color: $btn-hover;
+  }
+}
+
+.after-form {
+  margin: 1rem auto;
+  width: 80%;
+  min-width: 30rem;
+}

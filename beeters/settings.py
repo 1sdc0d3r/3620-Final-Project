@@ -115,4 +115,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
+# Leading slash so {% static %} URLs resolve from site root on every page (e.g. /event/5).
+STATIC_URL = "/static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"

@@ -1,15 +1,11 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ event.title }}</title>
-  </head>
-  <body>
+{% extends "beeTheBeet/base.html" %}
+{% block title %}{{ event.title }}{% endblock %}
+{% block content %}
+  <div class="page">
     <h1>{{ event.title }}</h1>
     <p>{{ event.desc }}</p>
     <p>Location: {{ event.location }}</p>
     <p>Date: {{ event.date }}</p>
     <p><a href="{% url 'event_list' %}">Back to list</a></p>
-  </body>
-</html>
+  </div>
+{% endblock %}
