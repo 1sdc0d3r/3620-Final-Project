@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <body>
+    <h1>Events</h1>
+    <p><a href="{% url 'event_new' %}">New event</a></p>
+    <ul>
+      {% for e in events %}
+        <li><a href="{% url 'event_detail' e.pk %}">{{ e.title }}</a></li>
+      {% empty %}
+        <li>No events yet.</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

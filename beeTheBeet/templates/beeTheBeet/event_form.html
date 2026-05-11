@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Event</title>
+  </head>
+  <body>
+    <h1>New Event</h1>
+    <form method="post" action="">
+      {% csrf_token %}
+      {% for field in form %}
+        <div>
+          {{ field.label_tag }} {{ field }} {{ field.errors }}
+        </div>
+      {% endfor %}
+      <button type="submit">Save</button>
+    </form>
+    <p><a href="{% url 'event_list' %}">Cancel</a></p>
+  </body>
+</html>
